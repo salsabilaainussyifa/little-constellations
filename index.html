@@ -1,0 +1,127 @@
+
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Little Constellations ♡</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#fcf7ff;color:#514064;font-family:Georgia,serif;line-height:1.8}
+header{text-align:center;padding:65px 20px 50px;background:linear-gradient(145deg,#eadfff,#fff0f8,#f8e8ff)}
+.crown{font-size:48px;color:#b89a55}
+h1{font-size:clamp(38px,8vw,65px);font-weight:normal;line-height:1.2;color:#8666ac;margin:12px 0}
+h2{font-size:30px;font-weight:normal;color:#9876b7}
+p{color:#786987}
+button{font:inherit;cursor:pointer;border:0;border-radius:30px;padding:12px 22px;background:#a58ac9;color:white}
+section{max-width:850px;margin:auto;padding:42px 22px;text-align:center}
+nav{text-align:center;padding:14px;background:#fff9;position:sticky;top:0;z-index:2}
+nav a{color:#8869a9;text-decoration:none;margin:0 10px;font-size:14px}
+.card{background:white;border:1px solid #eee1f6;border-radius:22px;padding:23px;margin:15px auto;box-shadow:0 8px 25px #a58ac91a;max-width:600px}
+.photos{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px}
+.photo{background:linear-gradient(140deg,#f0e4ff,#ffeaf5);border-radius:16px;padding:35px 10px;font-size:36px}
+.letter{display:none;white-space:pre-line;text-align:left;background:#fff7fc;padding:20px;border-radius:15px}
+.letter.show{display:block}
+.secret{display:none;color:#9a70b3;font-size:19px}
+input,textarea{width:100%;padding:12px;border:1px solid #e0d2ee;border-radius:12px;margin:6px 0 14px;font:inherit}
+textarea{min-height:100px}
+footer{text-align:center;padding:35px;background:#f0e6fa;color:#826a98}
+a{overflow-wrap:anywhere}
+</style>
+</head>
+<body>
+<nav>
+<a href="#kenangan">Kenangan</a>
+<a href="#cerita">Cerita kita</a>
+<a href="#surat">Surat cinta</a>
+</nav>
+
+<header>
+<div class="crown">♕</div>
+<p>✧ A LITTLE UNIVERSE, JUST FOR YOU ✧</p>
+<h1>Little<br>Constellations ♡</h1>
+<p id="salam">Untuk seseorang yang menjadi bagian indah dalam ceritaku.</p>
+<button onclick="document.querySelector('#kenangan').scrollIntoView({behavior:'smooth'})">Buka dunia kecil kita ♡</button>
+<p style="font-size:13px">☾ ⋆｡°✩ made with love ✩°｡⋆ ☽</p>
+</header>
+
+<section id="kenangan">
+<h2>♡ Our Little Memories ♡</h2>
+<p>Momen kecil yang ingin kusimpan selamanya.</p>
+<div class="photos">
+<div class="card"><div class="photo">🌷</div><h3>Hari pertama</h3><p>Awal dari cerita indah kita.</p></div>
+<div class="card"><div class="photo">🧸</div><h3>Tawa kita</h3><p>Kenangan sederhana yang berharga.</p></div>
+<div class="card"><div class="photo">🌙</div><h3>Little moments</h3><p>Semoga selalu ada cerita baru.</p></div>
+</div>
+<p style="font-size:13px">Nanti foto-foto ini bisa kamu ganti dengan foto kenanganmu sendiri ♡</p>
+</section>
+
+<section id="cerita">
+<h2>✧ Our Story ✧</h2>
+<div class="card"><p>🌸 Chapter 01</p><h3>Awal cerita</h3><p>Semua kenangan punya awal yang istimewa.</p></div>
+<div class="card"><p>🦋 Chapter 02</p><h3>Hari-hari bahagia</h3><p>Terima kasih untuk tawa dan cerita yang kita bagi.</p></div>
+<div class="card"><p>⭐ Chapter 03</p><h3>To be continued...</h3><p>Masih banyak halaman indah yang menunggu.</p></div>
+</section>
+
+<section id="surat">
+<h2>💌 A Letter For You</h2>
+<div class="card">
+<p>Ada surat kecil yang kusimpan khusus untukmu.</p>
+<button onclick="document.querySelector('#isiSurat').classList.toggle('show')">Buka surat rahasia ♡</button>
+<div class="letter" id="isiSurat">
+Dear you,
+
+Terima kasih sudah menjadi bagian dari ceritaku. Semoga halaman kecil ini selalu mengingatkanmu bahwa momen sederhana pun bisa menjadi kenangan yang berharga.
+
+Semoga hari-harimu dipenuhi kebahagiaan, hal-hal baik, dan orang-orang yang menyayangimu.
+
+With love and stardust,
+Your friend ♡
+</div>
+</div>
+</section>
+
+<section>
+<h2>🌙 A Little Secret</h2>
+<div class="card">
+<p>Ps sst... ada pesan kecil untukmu!</p>
+<button onclick="document.querySelector('#rahasia').style.display='block'">Klik untuk kejutan ♡</button>
+<p class="secret" id="rahasia">Kamu adalah bagian dari cerita ini yang akan selalu punya tempat istimewa. ✨</p>
+</div>
+</section>
+
+<section>
+<h2>🎀 Make It Personal</h2>
+<div class="card">
+<p>Ubah sapaan dan surat untuk melihat pratinjau personalisasi.</p>
+<label>Nama penerima</label>
+<input id="nama" placeholder="Nama panggilan">
+<label>Pesan pembuka</label>
+<textarea id="pesan" placeholder="Tulis pesan manismu..."></textarea>
+<label>Isi surat khusus</label>
+<textarea id="surat" placeholder="Tulis surat kenanganmu..."></textarea>
+<button onclick="ubah()">Lihat pratinjau ♡</button>
+<p id="hasil"></p>
+<p style="font-size:13px">Pratinjau ini hanya mengubah halaman saat ini. Isinya belum tersimpan sebagai halaman pribadi online.</p>
+</div>
+</section>
+
+<footer>
+<div style="font-size:30px">👑 ♡ ✧</div>
+Little Constellations<br>
+A tiny universe made with love.
+</footer>
+
+<script>
+function ubah(){
+ const nama=document.getElementById('nama').value.trim();
+ const pesan=document.getElementById('pesan').value.trim();
+ const surat=document.getElementById('surat').value.trim();
+ if(nama) document.getElementById('salam').textContent='Untuk '+nama+', seseorang yang menjadi bagian indah dalam ceritaku. ♡';
+ if(pesan) document.getElementById('hasil').textContent=pesan;
+ if(surat) document.getElementById('isiSurat').textContent=surat;
+ document.getElementById('hasil').scrollIntoView({behavior:'smooth',block:'center'});
+}
+</script>
+</body>
+</html>
